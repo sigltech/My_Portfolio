@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './style.css'
 import './about.css'
-import ReactPageScroller from 'react-page-scroller';
 import { BurgerMenu } from '../../components';
 
 export default function Homepage({menuOpen, setMenuOpen}) {
@@ -12,7 +11,7 @@ export default function Homepage({menuOpen, setMenuOpen}) {
         menuOpen={menuOpen}
       />
       <div className='homepage-container'>
-          <div className='homepage-content'>
+          <div className='section1 homepage-content'>
               <div className="left-block">
                   <h1 className='homepage-title'>Richard Sigl</h1>
                   <h2>Full Stack Web Developer</h2>
@@ -22,10 +21,14 @@ export default function Homepage({menuOpen, setMenuOpen}) {
                       <a className='homepage-btns' href='/'>Contact Me</a>
                   </div>
               </div>
-              <div className="right-block">
+              {/* <div className="right-block">
                 
-              </div>
+              </div> */}
           </div>
+
+          <div className="section2">Second Page</div>
+          <div className="section3">Third Page</div>
+          <div className="section4">Fourth Page SCOOTLAND</div>
       </div>
     </>
   )

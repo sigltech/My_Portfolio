@@ -9,8 +9,8 @@
 * {
   font-family: 'Mukta', sans-serif;
   color: var(--color-primary-text);
+  box-sizing: border-box;
 }
-
 
 html {
   background: rgb(2,2,71);

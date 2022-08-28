@@ -1,5 +1,5 @@
 .left-block{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,14 +15,48 @@
     padding-right: 5rem;
 }
 
+.homepage-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
 
 .homepage-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* height: 100vh;
+    width: 100vw; */
+}
+
+.section1 {
     height: 100vh;
     width: 100vw;
+    scroll-snap-align: start;
 }
+
+.section2 {
+    background-color: #ff1010;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+.section3 {
+    background-color: #292c52;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+.section4 {
+    background-color: #ffc107;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+
 
 .homepage-title {
     margin: 0;
@@ -45,6 +79,12 @@
     display: inline-block;
     width: 600px;
     animation: slideInLeft 2s;
+}
+
+.homepage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .homepage-btns {
@@ -187,8 +227,17 @@
         align-items: center;
     }
 
+    .left-block {
+        width: 90%;
+    }
+
+    .homepage-title {
+        font-size: 3rem;
+    }
+
     .homepage-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 0;
     }
 
     .homepage-content p {
@@ -197,6 +246,13 @@
 
     .homepage-btns {
         margin-bottom: 1rem;
+    }
+
+    .homepage-buttons  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
     }
 
     .nav-title {
