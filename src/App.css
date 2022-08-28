@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
+
+:root {
+  --color-primary-text: rgb(225, 225, 225);
+  --color-secondary: #0f0;
+  --color-tertiary: #00f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Mukta', sans-serif;
+  color: var(--color-primary-text);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+html {
+  background: rgb(2,2,71);
+  background: -moz-linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
+  background: -webkit-linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
+  background: linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020247",endColorstr="#0f1285",GradientType=1); 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  padding: 0;
 }
