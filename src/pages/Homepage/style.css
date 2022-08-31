@@ -15,9 +15,11 @@
     padding-right: 5rem;
 }
 
+/* Home Page styling and Snap scroll effect */
+
 .homepage-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Add the y axis snap */
+    overflow-y: scroll; /* This allows the page to scroll as the hight we set below limits the page to 100vh */
     height: 100vh;
 }
 
@@ -32,25 +34,27 @@
 .section1 {
     height: 100vh;
     width: 100vw;
-    scroll-snap-align: start;
+    scroll-snap-align: start; /* Add location the scroll snap will stop at */
 }
 
-.section2 {
-    background-color: #ff1010;
+.about-section {
+    background: rgb(2,2,71);
+    background: -moz-linear-gradient(90deg, rgb(136, 136, 155) 17%, rgba(19,1,96,1) 46%, rgb(42, 44, 104) 80%);
+    background: -webkit-linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
+    background: linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020247",endColorstr="#0f1285",GradientType=1);
     height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
 }
 
-.section3 {
-    background-color: #292c52;
+.projects-section {
     height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
 }
 
-.section4 {
-    background-color: #ffc107;
+.contactme-section {
     height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
@@ -83,7 +87,7 @@
 
 .homepage-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -229,6 +233,8 @@
 
     .left-block {
         width: 90%;
+        justify-content: flex-start;
+        margin-top: 7rem;
     }
 
     .homepage-title {

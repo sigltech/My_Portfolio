@@ -14,9 +14,9 @@ export default function Navbar({menuOpen, setMenuOpen}) {
             <h1 className='nav-title'>Richard Sigl</h1>
             <div className='nav-links animate__animated animate__slideInRight'>
                 <a href='/'>Home</a>
-                <a href='/about'>About</a>
-                <a href='/'>Projects</a>
-                <a href='/'>Contact</a>
+                <a href='#about-header'>About</a>
+                <a href='#projects-header'>Projects</a>
+                <a href='#contact-header'>Contact</a>
             </div>
             <div 
               onClick={handleMenuOpen}

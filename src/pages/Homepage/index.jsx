@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './style.css'
 import './about.css'
-import { BurgerMenu } from '../../components';
+import './projects.css'
+import './contact.css'
+import { BurgerMenu, AboutPage, ProjectsPage, ContactmePage } from '../../components';
 
 export default function Homepage({menuOpen, setMenuOpen}) {
 
@@ -18,7 +20,7 @@ export default function Homepage({menuOpen, setMenuOpen}) {
                   <p className='homepage-about'>Hi, I'm Richard. I'm a full stack web developer with a passion for creating beautiful, functional websites and applications. I'm currently looking for a full time position as a web developer.</p>
                   <div className='homepage-buttons'>
                       <a className='homepage-btns' href='/'>View Projects</a>
-                      <a className='homepage-btns' href='/'>Contact Me</a>
+                      <a className='homepage-btns' href='#contact-header'>Contact Me</a>
                   </div>
               </div>
               {/* <div className="right-block">
@@ -26,9 +28,15 @@ export default function Homepage({menuOpen, setMenuOpen}) {
               </div> */}
           </div>
 
-          <div className="section2">Second Page</div>
-          <div className="section3">Third Page</div>
-          <div className="section4">Fourth Page SCOOTLAND</div>
+          <div className="about-section">
+              <AboutPage />
+          </div>
+          <div className="projects-section">
+            <ProjectsPage />
+          </div>
+          <div className="contactme-section">
+            <ContactmePage />
+          </div>
       </div>
     </>
   )
