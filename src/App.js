@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
-import { Homepage, AboutPage } from './pages';
+import { Homepage } from './pages';
 import Layout from './Layout/Layout.jsx';
 import { LoadingPage } from './components'
 
