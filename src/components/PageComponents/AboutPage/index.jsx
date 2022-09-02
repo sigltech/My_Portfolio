@@ -9,7 +9,11 @@ export default function AboutPage() {
     <div className='aboutpage-container'>
       <div className='aboutpage-content'>
         <div className='aboutpage-left'>
-          <h1 className='aboutpage-title' id='about-header'>About Me</h1>
+          <h1 
+            className='aboutpage-title' 
+            id='aboutmyjourney'>
+              About Me
+          </h1>
           <img 
           className='aboutpage-headshot-mobile'
           id='box'

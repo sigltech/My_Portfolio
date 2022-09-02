@@ -21,6 +21,7 @@
     scroll-snap-type: y mandatory; /* Add the y axis snap */
     overflow-y: scroll; /* This allows the page to scroll as the hight we set below limits the page to 100vh */
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .homepage-content {

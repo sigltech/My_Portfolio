@@ -1,85 +1,46 @@
 .contactmePage-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
 }
 
-.left-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    width: 50%;
+.contact-header {
+    margin-top: 30px;
 }
 
 .contactmePage-content {
-    margin-top: 3rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 4rem;
+    width: 100vw;
 }
 
-.contactdetails-div {
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.contact-icons {
+    margin: 0 2rem;
 }
 
-.contactmePage-email {
-    border: 2px solid #fff;
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    cursor: pointer;
-}
-
-.contactmePage-email:hover {
-    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-}
-
-.contactmePage-email a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#click-to-copy {
-    width: 80%;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
+.contactIcon-container {
+    margin-bottom: 0;
     border: 2px solid transparent;
-    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
 }
 
-#click-to-copy:hover {
-    border: 2px solid white;
-}
-
-.email-copied-msg {
-    transition: all 3s ease-in-out;
-    animation: appear 3s ease-in-out;
-}
-
-.show {
-    display: block !important;
-    color: white;
-    transition: all 3s ease-in-out;
-    animation: appear 3s ease-in-out;
-}
-
-.clipboard-msg {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    height: 50px;
+.contactIcon-container > svg {
+    position:relative;
     border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.contactIcon-container > svg:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    bottom: 5px;
+    transition: bottom 0.5s ease-in-out;
 }
 
 @keyframes appear {
