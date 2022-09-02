@@ -11,6 +11,7 @@ export default function Homepage({menuOpen, setMenuOpen}) {
     <>
       <BurgerMenu 
         menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
       />
       <div className='homepage-container'>
           <div className='section1 homepage-content'>

@@ -37,7 +37,7 @@ export default function AboutPage() {
           id='box'
           src={headshot}
           alt="headshot of Richard Sigl"
-          width={'300px'}
+          width={'400px'}
           />
       </div>
     </div>
