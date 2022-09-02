@@ -1,5 +1,4 @@
 import React from 'react'
-import urlShortener from '../../../assets/images/url_shortener_chrome_extension.png'
 
 export default function ProjectsPage() {
   return (

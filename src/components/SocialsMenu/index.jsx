@@ -1,6 +1,5 @@
 import React from 'react'
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
-import { pink } from '@mui/material/colors';
 
 export default function SocialsMenu() {
   return (
