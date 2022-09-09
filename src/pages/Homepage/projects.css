@@ -1,8 +1,9 @@
 .projectspage-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
     width: 100vw;
 }
@@ -21,47 +22,61 @@
     width: 100vw;
 }
 
-/* 
-.projectspage-title {
-    text-align: center;
-}
-
-.card-container {
-    display: flex;
-    border: 2px solid green;
-    max-width: 80vw;
-    padding: 2rem;
-    margin-top: 8rem;
-}
-
-.card-image {
-    margin-top: 1rem;
-}
-
-.card {
+.projects-cards-container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    overflow: visible;
+}
+
+.project-card-inner-container {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 1rem 0;
+}
+
+.project-cards {
+    display: flex;
+    overflow: visible;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 250px;
-    height: 100%;
-    padding: 0 1rem;
-    border: 2px solid red;
-    transition: all 1s ease-in-out;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #fff;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+.project-card h1 {
+    margin: 0;
+}
 
-    .card {
-        margin: 1rem 0;
-    }
-} */
+.project-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card-technologies {
+    color: aqua;
+}
+
+.project-card-link span {
+    margin-left: 0.5rem;
+}
 
 @media only screen and (max-width: 768px) {
     .projectspage-content {
