@@ -5,3 +5,4 @@ export {default as BurgerMenu } from './BurgerMenu';
 export {default as AboutPage } from './PageComponents/AboutPage';
 export {default as ProjectsPage } from './PageComponents/ProjectsPage';
 export {default as ContactmePage } from './PageComponents/ContactmePage';
+export {default as SmallerProjects } from './PageComponents/SmallerProjects';

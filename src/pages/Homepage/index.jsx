@@ -3,7 +3,7 @@ import './style.css'
 import './about.css'
 import './projects.css'
 import './contact.css'
-import { BurgerMenu, AboutPage, ProjectsPage, ContactmePage } from '../../components';
+import { BurgerMenu, AboutPage, ProjectsPage, ContactmePage, SmallerProjects } from '../../components';
 
 export default function Homepage({menuOpen, setMenuOpen}) {
 
@@ -36,6 +36,9 @@ export default function Homepage({menuOpen, setMenuOpen}) {
           </div>
           <div className="projects-section">
             <ProjectsPage />
+          </div>
+          <div className="smaller-projects-section">
+            <SmallerProjects />
           </div>
           <div className="contactme-section">
             <ContactmePage />

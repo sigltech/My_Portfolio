@@ -55,6 +55,12 @@
     scroll-snap-align: start;
 }
 
+.smaller-projects-section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
 .contactme-section {
     height: 100vh;
     width: 100vw;
