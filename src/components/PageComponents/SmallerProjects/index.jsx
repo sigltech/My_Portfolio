@@ -23,7 +23,7 @@ export default function SmallerProjects() {
                   <a href="https://github.com/sigltech/Password-generator-app"
                     className="project-card-link"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                         <GitHub />
                       <span >
                       GitHub Repo 
@@ -41,7 +41,7 @@ export default function SmallerProjects() {
                   <a href="https://github.com/sigltech/invoice-generator"
                     className="project-card-link"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                         <GitHub />
                       <span >
                       GitHub Repo 
@@ -59,7 +59,7 @@ export default function SmallerProjects() {
                   <a href="https://the-concept-crew.netlify.app"
                     className="project-card-link"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                         <GitHub />
                       <span >
                       GitHub Repo

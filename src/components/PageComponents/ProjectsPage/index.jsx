@@ -23,7 +23,7 @@ export default function ProjectsPage() {
                   <a href="https://github.com/sigltech/Done_to_do_app"
                     className="project-card-link"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                         <GitHub />
                       <span >
                         github Repo
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                   <a href="https://fp-story-mashups.netlify.app/"
                     className="project-card-link"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                         <Preview />
                       <span >
                         Live demo
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                   <a href="https://the-concept-crew.netlify.app"
                     className="project-card-link"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                         <Preview />
                       <span >
                         Live demo
