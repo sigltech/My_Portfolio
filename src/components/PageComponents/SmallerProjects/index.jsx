@@ -8,7 +8,7 @@ export default function SmallerProjects() {
         <h1
           className='projectspage-title'
           id='mycodingprojects'>
-            Smaller Projects
+          Smaller Projects
         </h1>
         <div className="projects-cards-container">
           <div className="project-card-inner-container">
@@ -24,10 +24,10 @@ export default function SmallerProjects() {
                     className="project-card-link"
                     target="_blank"
                     rel="noreferrer">
-                        <GitHub />
-                      <span >
-                      GitHub Repo 
-                      </span>
+                    <GitHub />
+                    <span >
+                      GitHub Repo
+                    </span>
                   </a>
                 </div>
               </div>
@@ -42,10 +42,10 @@ export default function SmallerProjects() {
                     className="project-card-link"
                     target="_blank"
                     rel="noreferrer">
-                        <GitHub />
-                      <span >
-                      GitHub Repo 
-                      </span>
+                    <GitHub />
+                    <span >
+                      GitHub Repo
+                    </span>
                   </a>
                 </div>
               </div>
@@ -60,10 +60,10 @@ export default function SmallerProjects() {
                     className="project-card-link"
                     target="_blank"
                     rel="noreferrer">
-                        <GitHub />
-                      <span >
+                    <GitHub />
+                    <span >
                       GitHub Repo
-                      </span>
+                    </span>
                   </a>
                 </div>
               </div>

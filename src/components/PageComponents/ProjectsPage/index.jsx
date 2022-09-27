@@ -8,7 +8,7 @@ export default function ProjectsPage() {
         <h1
           className='projectspage-title'
           id='mycodingprojects'>
-            Projects
+          Projects
         </h1>
         <div className="projects-cards-container">
           <div className="project-card-inner-container">
@@ -24,10 +24,10 @@ export default function ProjectsPage() {
                     className="project-card-link"
                     target="_blank"
                     rel="noreferrer">
-                        <GitHub />
-                      <span >
-                        github Repo
-                      </span>
+                    <GitHub />
+                    <span >
+                      github Repo
+                    </span>
                   </a>
                 </div>
               </div>
@@ -42,10 +42,10 @@ export default function ProjectsPage() {
                     className="project-card-link"
                     target="_blank"
                     rel="noreferrer">
-                        <Preview />
-                      <span >
-                        Live demo
-                      </span>
+                    <Preview />
+                    <span >
+                      Live demo
+                    </span>
                   </a>
                 </div>
               </div>
@@ -60,12 +60,12 @@ export default function ProjectsPage() {
                     className="project-card-link"
                     target="_blank"
                     rel="noreferrer">
-                        <Preview />
-                      <span >
-                        Live demo
-                      </span>
+                    <Preview />
+                    <span >
+                      Live demo
+                    </span>
                   </a>
-                  <p style={{"color": "red"}}>For best experience, use on mobile</p>
+                  <p style={{ "color": "red" }}>For best experience, use on mobile</p>
                 </div>
               </div>
             </div>
