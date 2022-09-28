@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
-import { Homepage } from './pages';
+import { Routes, Route } from 'react-router-dom';
+import { Homepage, Blog } from './pages';
 import Layout from './Layout/Layout.jsx';
 import { LoadingPage } from './components'
 
@@ -11,9 +11,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout menuOpen={menuOpen}
-setMenuOpen={setMenuOpen} />} >
+        setMenuOpen={setMenuOpen} />} >
         <Route path="/" element={<Homepage menuOpen={menuOpen}
-setMenuOpen={setMenuOpen} />} />
+          setMenuOpen={setMenuOpen} />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/" element={<LoadingPage />} />
       </Route>
     </Routes>

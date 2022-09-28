@@ -23,15 +23,13 @@
 }
 
 .aboutpage-about-container {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: 0;
-    scrollbar-track-color: transparent;
-    text-align: justify;
     border: 2px solid transparent;
     /* box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.4); */
-    padding: 0 1.2rem;
-    height: 70%;
+    height: 80%;
+}
+
+.inner-about-container {
+    height: 100%;
 }
 
 .aboutpage-headshot {

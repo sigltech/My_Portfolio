@@ -1,4 +1,4 @@
-.left-block{
+.left-block {
     /* position: absolute; */
     display: flex;
     flex-direction: column;
@@ -18,10 +18,14 @@
 /* Home Page styling and Snap scroll effect */
 
 .homepage-container {
-    scroll-snap-type: y mandatory; /* Add the y axis snap */
-    overflow-y: scroll; /* This allows the page to scroll as the hight we set below limits the page to 100vh */
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    /* Add the y axis snap */
+    overflow-y: scroll;
+    /* This allows the page to scroll as the hight we set below limits the page to 100vh */
     height: 100vh;
     scroll-behavior: smooth;
+    width: 100vw;
 }
 
 .homepage-content {
@@ -35,21 +39,28 @@
 .section1 {
     height: 100vh;
     width: 100vw;
-    scroll-snap-align: start; /* Add location the scroll snap will stop at */
+    scroll-snap-align: start;
+    /* Add location the scroll snap will stop at */
 }
 
 .about-section {
-    background: rgb(2,2,71);
-    background: -moz-linear-gradient(90deg, rgb(136, 136, 155) 17%, rgba(19,1,96,1) 46%, rgb(42, 44, 104) 80%);
-    background: -webkit-linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
-    background: linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020247",endColorstr="#0f1285",GradientType=1);
+    background: rgb(2, 2, 71);
+    background: -moz-linear-gradient(90deg, rgb(136, 136, 155) 17%, rgba(19, 1, 96, 1) 46%, rgb(42, 44, 104) 80%);
+    background: -webkit-linear-gradient(90deg, rgba(2, 2, 71, 1) 17%, rgba(19, 1, 96, 1) 46%, rgba(15, 18, 133, 1) 80%);
+    background: linear-gradient(90deg, rgba(2, 2, 71, 1) 17%, rgba(19, 1, 96, 1) 46%, rgba(15, 18, 133, 1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020247", endColorstr="#0f1285", GradientType=1);
     height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
 }
 
 .projects-section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+.blog-section {
     height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
@@ -145,7 +156,7 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     z-index: 1;
     animation: slideInLeft 1s ease-in-out;
     transition: all 1s ease-in-out;
@@ -155,6 +166,7 @@
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -170,51 +182,86 @@
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-@-webkit-keyframes jello-horizontal{
-    0%{
-        -webkit-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)}
-    30%{
-        -webkit-transform:scale3d(1.25,.75,1);
-        transform:scale3d(1.25,.75,1)}
-    40%{
-        -webkit-transform:scale3d(.75,1.25,1);
-        transform:scale3d(.75,1.25,1)}
-    50%{
-        -webkit-transform:scale3d(1.15,.85,1);
-        transform:scale3d(1.15,.85,1)}
-    65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}
-    75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}
-    100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
 
-@keyframes jello-horizontal{
-    0%{
-        -webkit-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)}
-    30%{
-        -webkit-transform:scale3d(1.25,.75,1);
-        transform:scale3d(1.25,.75,1)}
-    40%{
-        -webkit-transform:scale3d(.75,1.25,1);
-        transform:scale3d(.75,1.25,1)}
-    50%{
-        -webkit-transform:scale3d(1.15,.85,1);
-        transform:scale3d(1.15,.85,1)}
-    65%{
-        -webkit-transform:scale3d(.95,1.05,1);
-        transform:scale3d(.95,1.05,1)}
-    75%{
-        -webkit-transform:scale3d(1.05,.95,1);
-        transform:scale3d(1.05,.95,1)}
-    100%{
-        -webkit-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)}}
+    30% {
+        -webkit-transform: scale3d(1.25, .75, 1);
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        -webkit-transform: scale3d(.75, 1.25, 1);
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, .85, 1);
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+@keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, .75, 1);
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        -webkit-transform: scale3d(.75, 1.25, 1);
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, .85, 1);
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
 
 
 @keyframes slideInLeft {
     0% {
         transform: translateX(-200%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -224,6 +271,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -261,7 +309,7 @@
         margin-bottom: 1rem;
     }
 
-    .homepage-buttons  {
+    .homepage-buttons {
         flex-direction: column;
         justify-content: center;
         align-items: center;

@@ -1,4 +1,4 @@
-.smaller-projectspage-container {
+.smaller-projects-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -14,5 +14,16 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    
+
+}
+
+.smaller-projects-cards-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 5rem;
+    overflow: visible;
 }

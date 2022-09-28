@@ -1,0 +1,115 @@
+.blogpage-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100vw;
+}
+
+.blog-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.home-cards-container {
+    display: flex;
+    margin-top: 3.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    max-width: 19rem;
+    padding: 1.4rem 3rem;
+    margin: 0 2rem;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card-image {
+    width: 16rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-image img {
+    width: 100%;
+    position: relative;
+}
+
+.more-blog-btn {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    right: 6rem;
+    height: 3rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.pr-2 {
+    padding-right: 2rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.more-blog-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.read-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 3rem;
+    margin-top: 2rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.read-more-btn p {
+    color: inherit;
+}
+
+.read-more-btn:hover {
+    background-color: transparent;
+    color: white;
+}
