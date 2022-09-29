@@ -16,6 +16,7 @@ function App() {
           setMenuOpen={setMenuOpen} />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/" element={<LoadingPage />} />
+        <Route path="*" element={<h1>404 NOT FOUND :D</h1>} />
       </Route>
     </Routes>
   );
