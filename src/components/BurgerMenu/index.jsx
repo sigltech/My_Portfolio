@@ -7,8 +7,8 @@ export default function BurgerMenu({ menuOpen, setMenuOpen }) {
         const burgerLines = document.querySelector('.burger-container')
         burgerLines.classList.remove('burger-open')
     }
-    
-    if(menuOpen) {
+
+    if (menuOpen) {
         return (
             <div className='sidebar'>
                 <main id="page-wrap">

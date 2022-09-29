@@ -13,11 +13,11 @@
 }
 
 html {
-  background: rgb(2,2,71);
-  background: -moz-linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
-  background: -webkit-linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
-  background: linear-gradient(90deg, rgba(2,2,71,1) 17%, rgba(19,1,96,1) 46%, rgba(15,18,133,1) 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020247",endColorstr="#0f1285",GradientType=1); 
+  background: rgb(2, 2, 71);
+  background: -moz-linear-gradient(90deg, rgba(2, 2, 71, 1) 17%, rgba(19, 1, 96, 1) 46%, rgba(15, 18, 133, 1) 80%);
+  background: -webkit-linear-gradient(90deg, rgba(2, 2, 71, 1) 17%, rgba(19, 1, 96, 1) 46%, rgba(15, 18, 133, 1) 80%);
+  background: linear-gradient(90deg, rgba(2, 2, 71, 1) 17%, rgba(19, 1, 96, 1) 46%, rgba(15, 18, 133, 1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020247", endColorstr="#0f1285", GradientType=1);
 }
 
 body {
