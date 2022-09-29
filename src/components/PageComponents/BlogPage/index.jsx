@@ -10,11 +10,11 @@ export default function BlogPage() {
     const handleBlogNavigate = () => {
         navigate('/blog');
     }
-
+    const API = 'https://blog-server-portfolio.onrender.com/posts';
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'http://127.0.0.1:5000/posts',
+            url: API,
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
