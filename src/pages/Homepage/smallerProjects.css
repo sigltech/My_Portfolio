@@ -27,3 +27,21 @@
     margin-top: 5rem;
     overflow: visible;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .smaller-project-card-inner-container {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .smaller-projects-cards-container {
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+
+    .project-cards {
+        overflow: scroll;
+    }
+
+}

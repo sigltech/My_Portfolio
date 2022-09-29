@@ -82,4 +82,21 @@
     .projectspage-content {
         text-align: center;
     }
+
+    .project-card {
+        width: 80vw;
+    }
+
+    .project-cards {
+        overflow: scroll;
+    }
+
+    .project-card-inner-container {
+        overflow: scroll;
+    }
+
+    .projects-cards-container {
+        overflow: hidden;
+        margin-top: 2rem;
+    }
 }

@@ -37,10 +37,10 @@ export default function BlogPage() {
                 <h1 id='blog-page'>Blog Page</h1>
             </div>
             <div className='outer-home-blog-container'>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='inner-home-blog-container'>
 
-                    <h1 style={{ 'margin-top': '10rem', fontSize: '4rem' }}>coming Soon!</h1>
-                    <p style={{ width: '50%' }}>A blog page with regular posts about my encounters with learning to program, as well as information about JavaScript, HTML/CSS, React, Flask and other languages and Framework tutorials</p>
+                    <h1>coming Soon!</h1>
+                    <p>A blog page with regular posts about my encounters with learning to program, as well as information about JavaScript, HTML/CSS, React, Flask and other languages and Framework tutorials</p>
                 </div>
             </div>
             {/* <div className='outer-home-blog-container'>
