@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import './style.css'
-import bgImg from '../../assets/images/v2osk-IHKBF23A_iw-unsplash.jpg'
 
 export default function NewProjectModal() {
     const navigate = useNavigate();

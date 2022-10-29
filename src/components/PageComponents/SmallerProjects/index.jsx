@@ -1,5 +1,4 @@
 import React from 'react'
-import { GitHub, Preview } from '@mui/icons-material';
 import { CodingChallenges } from '../../../data/CodingChallenges';
 import ProjectsCard from '../../ProjectsCard';
 

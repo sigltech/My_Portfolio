@@ -1,15 +1,11 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function BlogPage() {
-    const navigate = useNavigate()
+    //eslint-disable-next-line
     const [blogs, setBlogs] = React.useState([])
 
-    const handleBlogNavigate = () => {
-        navigate('/blog');
-    }
     const API = 'https://blog-server-portfolio.onrender.com/posts';
     useEffect(() => {
         const options = {
