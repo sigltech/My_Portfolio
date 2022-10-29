@@ -6,6 +6,7 @@ import { BlogInfoCard, BlogPostModal } from '../../components'
 export default function Blog() {
 
     const [blogs, setBlogs] = useState([])
+    //eslint-disable-next-line
     const [modalContent, setModalContent] = useState({})
 
     const handleBlogPostModal = (blog) => {

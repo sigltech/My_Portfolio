@@ -1,0 +1,133 @@
+.newproject-modal-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+    background: url('../../assets/images/v2osk-IHKBF23A_iw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 65%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 100;
+    animation: appear 1.5s ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.right-block {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.right-block h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close-btn-word {
+    font-size: 1.3rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 1rem;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    opacity: 0.4;
+}
+
+.bouncing-arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#bouncingarrow-left {
+    transform: scale(1);
+    rotate: -30deg;
+}
+
+.bounce-animate {
+    animation: bounce 0.7s infinite;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#bouncingarrow-right {
+    rotate: 30deg;
+}
+
+.newproject-btn {
+    background-color: #E2856E;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 30px;
+    color: #ffffff;
+    font: normal bold 1.2rem 'Open Sans', sans-serif;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.newproject-btn:hover {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #E2856E;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .newproject-modal-container {
+        width: 95%;
+        height: 95%;
+        z-index: 100000;
+    }
+}

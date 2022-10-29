@@ -6,6 +6,7 @@ import './smallerProjects.css'
 import './contact.css'
 import './blog.css'
 import { BurgerMenu, AboutPage, ProjectsPage, ContactmePage, SmallerProjects, BlogPage } from '../../components';
+import NewProjectModal from '../../components/NewProjectModal';
 
 export default function Homepage({ menuOpen, setMenuOpen }) {
 
@@ -15,6 +16,7 @@ export default function Homepage({ menuOpen, setMenuOpen }) {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
+      <NewProjectModal />
       <div className='homepage-container'>
         <div className='section1 homepage-content'>
           <div className="left-block">
@@ -28,9 +30,6 @@ export default function Homepage({ menuOpen, setMenuOpen }) {
               <a className='homepage-btns' href='#contactme'>Contact Me</a>
             </div>
           </div>
-          {/* <div className="right-block">
-                
-              </div> */}
         </div>
 
         <div className="about-section">

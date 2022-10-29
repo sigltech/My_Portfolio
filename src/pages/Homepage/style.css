@@ -7,12 +7,8 @@
     width: 70%;
 }
 
-.right-block {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    width: 50%;
-    padding-right: 5rem;
+.nav-title {
+    cursor: pointer;
 }
 
 /* Home Page styling and Snap scroll effect */
@@ -136,6 +132,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 #page-wrap a {
@@ -160,6 +157,10 @@
     z-index: 1;
     animation: slideInLeft 1s ease-in-out;
     transition: all 1s ease-in-out;
+}
+
+.sidebar a {
+    margin: 1rem 0;
 }
 
 @keyframes slideInLeft {

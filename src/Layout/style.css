@@ -101,14 +101,12 @@
     height: 50px;
     width: 50px;
     cursor: pointer;
-    z-index: 10000000 !important;
 }
 
 .burger-container .line1,
 .burger-container .line2,
 .burger-container .line3 {
     position: relative;
-    z-index: 1;
     width: 35px;
     height: 2px;
     background-color: rgb(255, 255, 255);
@@ -123,11 +121,13 @@
 
 .burger-open.burger-container .line2 {
     opacity: 0;
+    z-index: 10000;
 }
 
 .burger-open.burger-container .line3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    z-index: 10000;
 }
 
 @keyframes slideInRight {
@@ -227,7 +227,6 @@
         top: 20px;
         position: absolute;
         display: block;
-        z-index: 9999;
     }
 
     #burger-container {

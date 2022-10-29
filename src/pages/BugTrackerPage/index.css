@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+.bugpage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2E2E3A;
+}
+
+.bugcontent-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+}
+
+.bugleft-container {
+    width: 55%;
+}
+
+.bugright-container {
+    width: 45%;
+}
+
+.bugleft-container,
+.bugright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.bugcontent {
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+.bugtracker-img {
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.bugtracker-img:hover {
+    transform: scale(1.4);
+}
+
+.dashboard-img:hover {
+    right: 100px;
+    z-index: 100;
+}
+
+.loginportal-img:hover {
+    z-index: 100;
+}
+
+.newuser-img:hover {
+    z-index: 100;
+    bottom: 80px;
+}
+
+.bugcontent h2 {
+    margin: 0;
+    color: #E2856E;
+}
+
+.newuser-img {
+    position: absolute;
+    right: 100px;
+    top: 350px;
+    z-index: 20;
+}
+
+.dashboard-img {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    z-index: 1;
+}
+
+.loginportal-img {
+    position: relative;
+}
+
+.features-list {
+    list-style: disc;
+    text-align: start;
+}
+
+.technolgies-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.technolgies-list li {
+    margin: 0 0.2rem;
+    color: aqua;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    margin: 0.4rem 0.4rem;
+
+}
+
+.bugfeatures_bugs {
+    display: flex;
+}
+
+.links-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+
+}
+
+.links-container {
+    width: 40%;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.technologies-container {
+    width: 60%;
+}
+
+.links-list li {
+    background: #E2856E;
+    margin: 0 0.3rem;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    color: #ffffff;
+    font: normal bold 1.2rem 'Open Sans', sans-serif;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.links-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.links-list li:hover {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #E2856E;
+    background-color: transparent;
+}
+
+
+/* *********************** MEDIA QUERIES ************************ */
+
+@media only screen and (max-width: 1276px) {
+    .bugcontent-container {
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+
+    .bugleft-container {
+        width: 100%;
+    }
+
+    .bugright-container {
+        width: 100%;
+    }
+
+    .bugtracker-img {
+        width: 100%;
+    }
+
+    .bugpage-title {
+        margin-top: 4rem;
+    }
+
+    .bugfeatures_bugs {
+        flex-direction: column;
+    }
+
+    .project-imgs {
+        display: none;
+    }
+
+    .links-container {
+        width: 100%;
+    }
+
+    .technologies-container {
+        width: 100%;
+    }
+
+    .newuser-img {
+        display: none;
+    }
+
+    .dashboard-img {
+        position: relative;
+        margin: 0;
+    }
+
+    .loginportal-img {
+        display: none;
+    }
+}
