@@ -58,6 +58,12 @@
     margin: 1rem;
     padding: 2rem 0.5rem;
     text-align: center;
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
 }
 
 .project-card h1 {

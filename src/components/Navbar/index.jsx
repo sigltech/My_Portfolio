@@ -13,12 +13,12 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
       <nav className='navbar'>
         <h1 className='nav-title'>Richard Sigl</h1>
         <div className='nav-links animate__animated animate__slideInRight'>
-          <a href='#richardsigl'>Home</a>
-          <a href='#aboutmyjourney'>About</a>
-          <a href='#mycodingprojects'>Projects</a>
-          <a href='#smaller-projects'>Challenges</a>
-          <a href='#blog-page'>Blog</a>
-          <a href='#contactme'>Contact</a>
+          <a href='/#richardsigl'>Home</a>
+          <a href='/#aboutmyjourney'>About</a>
+          <a href='/#mycodingprojects'>Projects</a>
+          <a href='/#smaller-projects'>Challenges</a>
+          <a href='/#blog-page'>Blog</a>
+          <a href='/#contactme'>Contact</a>
         </div>
         <div
           onClick={handleMenuOpen}
