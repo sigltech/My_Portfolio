@@ -17,7 +17,9 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
           <a href='/#richardsigl'>Home</a>
           <a href='/#aboutmyjourney'>About</a>
           <a href='/#mycodingprojects'>Projects</a>
-          <a href='/bugtracker-project'>bug Tracker</a>
+          <p
+            onClick={() => navigate('/bugtracker-project')}
+          >bug Tracker</p>
           <a href='/#smaller-projects'>Challenges</a>
           <a href='/#blog-page'>Blog</a>
           <a href='/#contactme'>Contact</a>

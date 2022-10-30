@@ -50,6 +50,24 @@
 
 }
 
+.navbar p {
+    display: inline-block;
+    color: var(--color-primary-text);
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.navbar p:hover {
+    border-bottom: 2px solid var(--color-primary-text);
+    -webkit-animation: vibrate-1 0.3s linear both;
+    animation: vibrate-1 0.3s linear both;
+
+}
+
 .socials-menu {
     display: flex;
     flex-direction: column;
