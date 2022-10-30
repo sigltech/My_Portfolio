@@ -31,6 +31,9 @@ export default function NewProjectModal() {
                     </div>
                     <div className='modal-text'>
                         <h2>Check out my new Bug Tracker Project!</h2>
+                        <h3>use the demo account details below:</h3>
+                        <h3>username: demo1</h3>
+                        <h3>Password: demo1</h3>
                         <button className='newproject-btn' onClick={() => navigate('/bugtracker-project')}>Check it out here</button>
                     </div>
                 </div>
