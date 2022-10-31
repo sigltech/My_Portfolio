@@ -31,15 +31,6 @@ export default function BugTrackerPage({ menuOpen, setMenuOpen }) {
                                     <li>Admins can register new users with temporary passwords that can be given to new users and changed in the settings page</li>
                                 </ul>
                             </div>
-                            <div>
-                                <h2>Known Bugs</h2>
-                                <ul className='features-list'>
-                                    <li>To Create a new user, admins must double click the create button and the first click checks that the old password is correct</li>
-                                    <li>When a bug is marked as completed, it is not filterable/removed from the view bugs page</li>
-                                    <li>When editing a bug, there is no indication that the bug has been succesfully changed, even though it has</li>
-
-                                </ul>
-                            </div>
                         </div>
                         <div className="bugcontent bugfeatures_bugs">
                             <div className='technologies-container'>
