@@ -20,14 +20,15 @@ export default function BugTrackerPage({ menuOpen, setMenuOpen }) {
                             <h2>Overview</h2>
                         </div>
                         <div className="bugcontent">
-                            <p>This application is a simple bug tracking system. It allows admins to create bugs, assign them to developers, and allos all users to track their progress. It also allows developers to view bugs assigned to them and mark them as resolved.</p>
+                            <p>This application is a simple bug tracking system. It allows admins to create bugs, assign them to developers, and allows all users to track their progress. It also allows developers to view bugs assigned to them and mark them as resolved.</p>
                         </div>
                         <div className="bugcontent bugfeatures_bugs">
                             <div>
                                 <h2>Features</h2>
                                 <ul className='features-list'>
                                     <li>Admins can create bugs and assign them to developers</li>
-                                    <li>Developers can view bugs mark them as completed</li>
+                                    <li>Sort bugs based on priority or whether it is assigned to them</li>
+                                    <li>Developers can view bugs and mark them as completed</li>
                                     <li>Admins can register new users with temporary passwords that can be given to new users and changed in the settings page</li>
                                 </ul>
                             </div>
