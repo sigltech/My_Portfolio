@@ -50,7 +50,7 @@ export default function BugTrackerPage({ menuOpen, setMenuOpen }) {
                                 <ul className='links-list'>
                                     <li><a href='https://github.com/sigltech/developerBugTracker_client' target='_blank' rel="noreferrer">Client Repo</a></li>
                                     <li><a href='https://github.com/sigltech/-developerBugTracker_Server' target='_blank' rel="noreferrer">Server Repo</a></li>
-                                    <li><a href='https://main--glowing-tulumba-f0d39d.netlify.app/' target='_blank' rel="noreferrer">Live App</a></li>
+                                    <li><a href='https://siglbug-tracker.netlify.app' target='_blank' rel="noreferrer">Live App</a></li>
                                 </ul>
                             </div>
 
