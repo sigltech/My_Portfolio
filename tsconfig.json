@@ -21,6 +21,10 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "src",
+    "./src/index.d.ts"
+  ],
+  "paths": {
+    "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+  }
 }
