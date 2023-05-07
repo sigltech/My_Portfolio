@@ -13,7 +13,7 @@ const CustomContentRow = styled(ContentRow)(({theme}) => ({
     width: '70%',
     zIndex: 1,
     [theme.breakpoints.down('md')]: {
-        width: '100%'
+        width: '90%'
     },
 }))
 

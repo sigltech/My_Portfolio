@@ -82,8 +82,9 @@ function App() {
   const theme = createTheme(getDesignTokens(isDarkMode));
 
   theme.typography.h3 = {
+    fontSize: '2.9rem',
     [theme.breakpoints.up('md')]: {
-      fontSize: '2.4rem',
+      fontSize: '2.7rem',
     },
   }
 

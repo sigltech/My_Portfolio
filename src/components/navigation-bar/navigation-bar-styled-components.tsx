@@ -10,8 +10,8 @@ const NavBarContainer = styled(Card)(({theme}) => ({
     paddingRight: theme.spacing(4),
     margin: 0,
     boxShadow: '1px 1px 15px 0px rgba(255,255,255,0.05)',
-    backgroundColor: 'transparent',
-    backgroundImage: 'none',
+    backgroundColor: theme.palette.background.paper,
+    backgroundImage: theme.palette.background.paper,
     position: 'fixed',
     top: 0
 }))

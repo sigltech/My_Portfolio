@@ -17,6 +17,15 @@ import {
     StyledItem,
     StyledEducationItem
 } from './experience-page-styled-components';
+import {styled} from "@mui/material/styles";
+
+const StyledGrid = styled(Grid)(({theme}) => ({
+    paddingLeft: 20,
+    paddingRight: 20,
+    [theme.breakpoints.down('md')]: {
+        margin: 0,
+    },
+}))
 
 const ExperiencePage = ({
 isDarkMode,
@@ -30,21 +39,16 @@ setIsLoading
         )
     }
 
-    const gridItemSpacing = {
-        marginRight: '2rem',
-    }
-
     const gridContainerStyle = {
         paddingLeft: 20,
-        paddingRight: 20
+        paddingRight: 20,
     }
 
     return (
         <>
             <StyledDivContainer>
                 <Typography style={{marginBottom: 20, marginLeft: 20}} variant={'h2'}>Experience</Typography>
-                <Grid
-                    style={gridContainerStyle}
+                <StyledGrid
                     container
                     direction={'row'}
                     xs={12}
@@ -57,7 +61,6 @@ setIsLoading
                             <Grid
                                 item
                                 xs={12}
-                                style={gridItemSpacing}
                             >
                                 <StyledItem key={item.id} style={{height: '100%'}}>
                                     <DivFlexSpaceBetween>
@@ -88,7 +91,7 @@ setIsLoading
                                 </StyledItem>
                             </Grid>)
                         })}
-                </Grid>
+                </StyledGrid>
             </StyledDivContainer>
             <StyledDivContainer>
                 <Typography style={{marginBottom: 20, marginLeft: 20}} variant={'h2'}>Education</Typography>
@@ -100,7 +103,7 @@ setIsLoading
                 >
                     {education.map((item) => {
                         return (
-                            <Grid item xs={12} style={gridItemSpacing}>
+                            <Grid item xs={12}>
                                 <StyledEducationItem key={item.id}>
                                     <DivFlexSpaceBetween>
                                         <div>
