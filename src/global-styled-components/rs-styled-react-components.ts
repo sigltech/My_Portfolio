@@ -7,12 +7,16 @@ export const DivFlexSpaceBetween = styled('div')(({theme}) => ({
     padding: theme.spacing(1),
 }))
 
-export const DivFlexCenterAll = styled('div')(() => ({
+export const DivFlexCenterAll = styled('div')(({theme}) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
-    minHeight: '100vh'
+    minHeight: '100vh',
+    [theme.breakpoints.down('md')]: {
+        flexDirection: 'column'
+    },
+
 }))
 
 export const StyledRsButton = styled(Button)(({theme}) => ({

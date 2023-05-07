@@ -6,23 +6,33 @@ import {DivFlexCenterAll} from "../../global-styled-components/rs-styled-react-c
 import {HomePageProps} from "../../types/types";
 //@ts-ignore
 import avatar from '../../assets/avatar_richard_sigl.jpg';
+import './home-page.css';
 
-const CustomContentRow = styled(ContentRow)(() => ({
+const CustomContentRow = styled(ContentRow)(({theme}) => ({
     alignItems: 'center',
     width: '70%',
-    zIndex: 1
+    zIndex: 1,
+    [theme.breakpoints.down('md')]: {
+        width: '100%'
+    },
 }))
 
-const StyledMainContainerContent = styled(CardContent)(() => ({
-    height: '100vh',
-    backgroundColor: 'inherit'
+const StyledMainContainerContent = styled(CardContent)(({theme}) => ({
+    minHeight: '100vh',
+    backgroundColor: 'inherit',
 }))
 
 const StyledTypography = styled(Typography)(({theme}) => ({
     margin: 0,
     marginBottom: theme.spacing(5),
     zIndex: 1,
-    width: '50%'
+    width: '50%',
+    [theme.breakpoints.down('md')]: {
+        margin: 0,
+        width: '100%',
+        textAlign: 'center',
+        marginBottom: theme.spacing(5),
+    },
 }))
 
 const StyledLinearProgress = styled(LinearProgress)(() => ({
@@ -36,22 +46,30 @@ const StyledLinearProgress = styled(LinearProgress)(() => ({
     filter: 'blur(5px)',
 }))
 
+const StyledImg = styled('img')(({theme}) => ({
+    position: 'absolute',
+    marginRight: '30%',
+    marginLeft: '80%',
+    marginBottom: '50%',
+    marginTop: '45%',
+    width: '35%',
+    borderRadius: '30%',
+    zIndex: 0,
+    [theme.breakpoints.down('md')]: {
+        position: 'relative',
+        marginRight: 0,
+        marginLeft: 0,
+        width: '60%',
+        marginTop: theme.spacing(0),
+        marginBottom: theme.spacing(5),
+    },
+}))
+
 
 
 const HomePage = ({
 isLoading,
 }:HomePageProps): React.ReactElement => {
-
-    const imgStyle: CSSProperties = {
-        position: 'absolute',
-        marginRight: '30%',
-        marginLeft: '80%',
-        marginBottom: '50%',
-        marginTop: '45%',
-        width: '35%',
-        borderRadius: '30%',
-        zIndex: 0
-    }
 
     if(isLoading) {
         return (
@@ -60,13 +78,12 @@ isLoading,
     }
     return (
         !isLoading &&(
-            <Grid xs={12}>
             <StyledMainContainerContent>
-                <DivFlexCenterAll>
-                    <img
+                <DivFlexCenterAll className={'home-page-content-container'}>
+                    <StyledImg
                         src={avatar}
                         alt={'avatar'}
-                        style={imgStyle}
+                        className={'home-page-avatar'}
                     />
                     <CustomContentRow>
                         <StyledTypography variant={'h3'} className='homepage-about'>
@@ -79,7 +96,6 @@ isLoading,
                     </CustomContentRow>
                 </DivFlexCenterAll>
             </StyledMainContainerContent>
-        </Grid>
         )
     )
 }

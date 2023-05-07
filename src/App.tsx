@@ -33,10 +33,12 @@ const getDesignTokens = (isDark: boolean) => {
         {
         default: 'rgb(52, 73, 102)',
         paper: 'rgb(52, 73, 102)',
+        card: 'rgb(52, 73, 102)',
         }:
         {
           default: 'rgb(240, 244, 239)',
           paper: 'rgb(240, 244, 239)',
+          card: 'rgb(240, 244, 239)',
         })
       },
       text: {
@@ -78,6 +80,18 @@ function App() {
   },[])
 
   const theme = createTheme(getDesignTokens(isDarkMode));
+
+  theme.typography.h3 = {
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2.4rem',
+    },
+  }
+
+  theme.typography.h4 = {
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.5rem',
+    },
+  }
   const router = createBrowserRouter([
     {
       element:
