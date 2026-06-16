@@ -1,103 +1,196 @@
-import React, {type CSSProperties} from 'react';
-import {styled} from "@mui/material/styles";
-import {CardContent, Grid, LinearProgress, Typography} from "@mui/material";
-import ContentRow from "../../global-styled-components/content-row/content-row";
-import {DivFlexCenterAll} from "../../global-styled-components/rs-styled-react-components";
-import {HomePageProps} from "../../types/types";
-//@ts-ignore
-import avatar from '../../assets/avatar_richard_sigl.jpg';
-import './home-page.css';
+import {
+  ArrowRightIcon,
+  ArrowUpRightIcon,
+  GithubLogoIcon,
+  CodeIcon,
+  SparkleIcon,
+  EnvelopeSimpleIcon,
+} from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Projects } from "@/data/Projects";
+import { CodingChallenges } from "@/data/CodingChallenges";
+import { ProjectCard } from "./project-card";
 
-const CustomContentRow = styled(ContentRow)(({theme}) => ({
-    alignItems: 'center',
-    width: '70%',
-    zIndex: 1,
-    [theme.breakpoints.down('md')]: {
-        width: '90%'
-    },
-}))
+const stack = [
+  "GCP",
+  "Golang",
+  "JavaScript",
+  "React",
+  "Postgres",
+  "Snowflake",
+  "MongoDB",
+  "Kubernetes",
+  "Node.js",
+  "Kotlin",
+];
 
-const StyledMainContainerContent = styled(CardContent)(({theme}) => ({
-    minHeight: '100vh',
-    backgroundColor: 'inherit',
-}))
-
-const StyledTypography = styled(Typography)(({theme}) => ({
-    margin: 0,
-    marginBottom: theme.spacing(5),
-    zIndex: 1,
-    width: '50%',
-    [theme.breakpoints.down('md')]: {
-        margin: 0,
-        width: '100%',
-        textAlign: 'center',
-        marginBottom: theme.spacing(5),
-    },
-}))
-
-const StyledLinearProgress = styled(LinearProgress)(() => ({
-    position: 'absolute',
-    transform: 'translate(-50%, -50%)',
-    left: '50%',
-    right: '50%',
-    top: '50%',
-    bottom: '50%',
-    width: '50%',
-    filter: 'blur(5px)',
-}))
-
-const StyledImg = styled('img')(({theme}) => ({
-    position: 'absolute',
-    marginRight: '30%',
-    marginLeft: '80%',
-    marginBottom: '50%',
-    marginTop: '45%',
-    width: '35%',
-    borderRadius: '30%',
-    zIndex: 0,
-    [theme.breakpoints.down('md')]: {
-        position: 'relative',
-        marginRight: 0,
-        marginLeft: 0,
-        width: '60%',
-        marginTop: theme.spacing(0),
-        marginBottom: theme.spacing(5),
-    },
-}))
-
-
-
-const HomePage = ({
-isLoading,
-}:HomePageProps): React.ReactElement => {
-
-    if(isLoading) {
-        return (
-            <StyledLinearProgress color={'primary'} />
-        )
-    }
-    return (
-        !isLoading &&(
-            <StyledMainContainerContent>
-                <DivFlexCenterAll className={'home-page-content-container'}>
-                    <StyledImg
-                        src={avatar}
-                        alt={'avatar'}
-                        className={'home-page-avatar'}
-                    />
-                    <CustomContentRow>
-                        <StyledTypography variant={'h3'} className='homepage-about'>
-                            <strong>Hi</strong>, I'm Richard.
-                        </StyledTypography>
-                        <StyledTypography variant={'h4'} className='homepage-about'>
-                            A professional full-stack software engineer with a passion for frontend web development
-                            working primarily with Kotlin and React.
-                        </StyledTypography>
-                    </CustomContentRow>
-                </DivFlexCenterAll>
-            </StyledMainContainerContent>
-        )
-    )
+export function HomePage() {
+  return (
+    <>
+      <Hero />
+      <FeaturedWork />
+      <Challenges />
+      <Stack />
+      <ContactCta />
+    </>
+  );
 }
 
-export default HomePage;
+function SectionLabel({ index, label }: { index: string; label: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-8">
+      <span className="font-mono text-xs text-accent tracking-widest">
+        / {index}
+      </span>
+      <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        {label}
+      </span>
+      <span className="flex-1 h-px bg-border" />
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="relative mx-auto max-w-6xl p-6 md:px-10 pt-12 pb-20 md:pb-32 grain">
+      <div>
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl font-bold leading-[0.95]">
+            Hi, I'm <span className="text-accent">Richard</span>.
+            <br />
+            <span className="text-muted-foreground">
+              I build software for the web.
+            </span>
+          </h1>
+
+          <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
+            Full-stack engineer with a soft spot for the frontend — currently
+            working in <span className="text-foreground">Kotlin</span> and{" "}
+            <span className="text-foreground">React</span> on customer reporting
+            tools at Unity Gaming Services.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Button asChild size="lg" className="rounded-full">
+              <Link to="/experience">
+                View experience
+                <ArrowRightIcon size={18} weight="bold" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full"
+            >
+              <a
+                href="https://github.com/sigltech"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <GithubLogoIcon size={18} weight="bold" />
+                GitHub
+              </a>
+            </Button>
+          </div>
+        </div>
+    </section>
+  );
+}
+
+function FeaturedWork() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 md:px-10 py-12">
+      <SectionLabel index="01" label="Selected Work" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {Projects.map((project, i) => (
+          <ProjectCard key={project.id} project={project} index={i + 1} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Challenges() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 md:px-10 py-12">
+      <SectionLabel index="02" label="Coding Challenges" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {CodingChallenges.map((c) => (
+          <a
+            key={c.id}
+            href={c.git_repo || c.live_demo || "#"}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="group relative rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/60 hover:-translate-y-1"
+          >
+            <div className="flex items-start justify-between gap-2 mb-3">
+              <CodeIcon
+                size={24}
+                weight="duotone"
+                className="text-accent"
+              />
+              <ArrowUpRightIcon
+                size={18}
+                weight="bold"
+                className="text-muted-foreground group-hover:text-accent transition-colors"
+              />
+            </div>
+            <h3 className="font-display text-xl font-semibold mb-2">
+              {c.title}
+            </h3>
+            <p className="text-sm text-muted-foreground line-clamp-3">
+              {c.description}
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Stack() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 md:px-10 py-12">
+      <SectionLabel index="03" label="Tools of the trade" />
+      <div className="flex flex-wrap gap-2">
+        {stack.map((s) => (
+          <Badge
+            key={s}
+            variant="secondary"
+            className="rounded-full px-4 py-2 text-sm font-mono"
+          >
+            <SparkleIcon size={12} weight="fill" className="text-accent" />
+            {s}
+          </Badge>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ContactCta() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-28">
+      <div className="rounded-3xl border border-border bg-secondary/40 p-10 md:p-16 text-center grain">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-4">
+          Let's talk
+        </p>
+        <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight max-w-2xl mx-auto leading-[1.05]">
+          Got an idea worth building?
+        </h2>
+        <p className="mt-5 text-muted-foreground max-w-md mx-auto">
+          I'm always open to interesting conversations — product, code,
+          opportunities, or just a hello.
+        </p>
+        <Button asChild size="lg" className="rounded-full mt-8">
+          <a href="mailto:siglrichardoskar@gmail.com">
+            <EnvelopeSimpleIcon size={18} weight="bold" />
+            Get in touch
+          </a>
+        </Button>
+      </div>
+    </section>
+  );
+}

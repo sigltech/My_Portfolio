@@ -1,138 +1,22 @@
-import React from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import {
-  HomePage,
-  ExperiencePage,
-  Page404
-} from "./pages";
-import {createTheme, ThemeProvider, CssBaseline} from "@mui/material";
-import Layout from "./layout/layout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Layout } from "@/components/layout";
+import { HomePage, ExperiencePage, Page404 } from "@/pages";
 
-const getDesignTokens = (isDark: boolean) => {
-  let mode: 'light' | 'dark';
-  if(isDark) {
-    mode = 'dark'
-  } else {
-    mode = 'light'
-  }
-
-  return ({
-    palette: {
-      mode,
-      primary: {
-        main: '#000',
-        ...(mode === 'dark' && {
-          main: 'rgb(240, 244, 239)',
-        }),
-      },
-      background: {
-        ...(mode === 'dark' ?
-        {
-        default: 'rgb(52, 73, 102)',
-        paper: 'rgb(52, 73, 102)',
-        card: 'rgb(52, 73, 102)',
-        }:
-        {
-          default: 'rgb(240, 244, 239)',
-          paper: 'rgb(240, 244, 239)',
-          card: 'rgb(240, 244, 239)',
-        })
-      },
-      text: {
-        ...(mode === 'light'
-            ? {
-              primary: 'rgb(0, 0, 0)',
-              secondary: 'rgb(0, 0, 0)',
-            }
-            : {
-              primary: '#fff',
-              secondary: '#fff',
-            }),
-      },
-    },
-  })
-};
-
-function App() {
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(false);
-  const getOrSetModeFromStorage = (): void => {
-    let viewMode;
-    if(window.localStorage.getItem('viewMode')) {
-      viewMode = window.localStorage.getItem('viewMode');
-    } else {
-      window.localStorage.setItem('viewMode', 'false')
-      viewMode = window.localStorage.getItem('viewMode');
-    }
-    setIsDarkMode(viewMode === 'true')
-  };
-
-  React.useEffect(() => {
-    setIsLoading(true)
-    getOrSetModeFromStorage();
-    setTimeout(() => {
-      setIsLoading(false);
-      console.log('not loading anymore')
-    },2000)
-  },[])
-
-  const theme = createTheme(getDesignTokens(isDarkMode));
-
-  theme.typography.h3 = {
-    fontSize: '2.9rem',
-    [theme.breakpoints.up('md')]: {
-      fontSize: '2.7rem',
-    },
-  }
-
-  theme.typography.h4 = {
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.5rem',
-    },
-  }
-  const router = createBrowserRouter([
-    {
-      element:
-          <Layout
-              isDarkMode={isDarkMode}
-              setIsDarkMode={setIsDarkMode}
-              isLoading={isLoading}
-              setIsLoading={setIsLoading}
-          />,
-      children: [
-          {
-            path: "/",
-            element:
-                <HomePage
-                    isDarkMode={isDarkMode}
-                    setIsDarkMode={setIsDarkMode}
-                    isLoading={isLoading}
-                    setIsLoading={setIsLoading}
-                />,
-          },
-    {
-      path: "/experience",
-      element:
-          <ExperiencePage
-              isDarkMode={isDarkMode}
-              setIsDarkMode={setIsDarkMode}
-              isLoading={isLoading}
-              setIsLoading={setIsLoading}
-          />,
-    },
-  ]},
+const router = createBrowserRouter([
   {
-    path:"*",
-    element: <Page404 />
+    element: <Layout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/experience", element: <ExperiencePage /> },
+    ],
   },
+  { path: "*", element: <Page404 /> },
 ]);
 
+function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <ThemeProvider>
       <RouterProvider router={router} />
     </ThemeProvider>
   );
