@@ -1,11 +1,11 @@
 export const Projects = [
     {
         id: 1,
-        title: "To Do App",
-        description: "A simple to do app that allows users to add, complete, and delete tasks. Users can create an account and login to save their tasks.",
-        technologies: ["React", "Flask", "SQLAlchemy", "PostgreSQL"],
-        git_repo: "https://github.com/sigltech/Done_to_do_app",
-        live_demo: "",
+        title: "Touch Rugby Hub",
+        description: "A cross-platform (iOS, Android, Web) hub for the touch rugby community — discover clubs and organisations, join teams, claim family members, and manage favourites. Google sign-in and push notifications, backed by Supabase.",
+        technologies: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL"],
+        git_repo: "https://github.com/sigltech/touch-rugby-hub",
+        live_demo: "https://touchrugbyhub.com",
     },
     {
         id: 2,
