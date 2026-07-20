@@ -3,8 +3,8 @@ export const Projects = [
         id: 1,
         title: "Touch Rugby Hub",
         description: "A cross-platform (iOS, Android, Web) hub for the touch rugby community — discover clubs and organisations, join teams, claim family members, and manage favourites. Google sign-in and push notifications, backed by Supabase.",
-        technologies: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL"],
-        git_repo: "https://github.com/sigltech/touch-rugby-hub",
+        technologies: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL", "OneSignal"],
+        git_repo: "",
         live_demo: "https://touchrugbyhub.com",
     },
     {
@@ -21,6 +21,6 @@ export const Projects = [
         description: "This app allows users to track bugs in their projects. Only admins can create users and bugs. Users can only view bugs and update bugs by marking them complete or editing them.",
         technologies: ["React", "Node.js", "MongoDB", "Express"],
         git_repo: "https://github.com/sigltech/developerBugTracker_client",
-        live_demo: "https://main--glowing-tulumba-f0d39d.netlify.app/",
+        live_demo: "",
     }
 ]

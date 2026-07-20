@@ -1,8 +1,6 @@
 import {
   ArrowRightIcon,
-  ArrowUpRightIcon,
   GithubLogoIcon,
-  CodeIcon,
   SparkleIcon,
   EnvelopeSimpleIcon,
 } from "@phosphor-icons/react";
@@ -10,7 +8,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Projects } from "@/data/Projects";
-import { CodingChallenges } from "@/data/CodingChallenges";
 import { ProjectCard } from "./project-card";
 
 const stack = [
@@ -31,7 +28,6 @@ export function HomePage() {
     <>
       <Hero />
       <FeaturedWork />
-      <Challenges />
       <Stack />
       <ContactCta />
     </>
@@ -112,48 +108,10 @@ function FeaturedWork() {
   );
 }
 
-function Challenges() {
-  return (
-    <section className="mx-auto max-w-6xl px-6 md:px-10 py-12">
-      <SectionLabel index="02" label="Coding Challenges" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {CodingChallenges.map((c) => (
-          <a
-            key={c.id}
-            href={c.git_repo || c.live_demo || "#"}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="group relative rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/60 hover:-translate-y-1"
-          >
-            <div className="flex items-start justify-between gap-2 mb-3">
-              <CodeIcon
-                size={24}
-                weight="duotone"
-                className="text-accent"
-              />
-              <ArrowUpRightIcon
-                size={18}
-                weight="bold"
-                className="text-muted-foreground group-hover:text-accent transition-colors"
-              />
-            </div>
-            <h3 className="font-display text-xl font-semibold mb-2">
-              {c.title}
-            </h3>
-            <p className="text-sm text-muted-foreground line-clamp-3">
-              {c.description}
-            </p>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Stack() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:px-10 py-12">
-      <SectionLabel index="03" label="Tools of the trade" />
+      <SectionLabel index="02" label="Tools of the trade" />
       <div className="flex flex-wrap gap-2">
         {stack.map((s) => (
           <Badge
